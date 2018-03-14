@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Truncate</title>
+</head>
+<body>
+  <p class="paragraph">Turnip greens yarrow ricebean rutabaga endive cauliflower sea  lettuce kohlrabi amaranth water <a href="https://www.google.pl/search?q=spinach" class="link">spinach</a> avocado daikon Süßkartoffel napa cabbage <strong>asparagus winter purslane kale. Celery potato scallion desert</strong> raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize <span style="font-size: 19px;color: blue;">bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</span> Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+
+  <div class="truncatedString">
+    <h1>Truncated String</h1>
+    <p class="string"></p>
+  </div>
+  <script type="text/javascript">
+
+    var string = document.getElementsByClassName('paragraph')[0].innerHTML;
+    var truncatedString = document.getElementsByClassName('string')[0];
+
+    truncate(string, 30);
+
+    function truncate(str, len){
+      (str.length >= len) ?  truncatedString.innerHTML = str.substring(0, len-3) + '&hellip;' : truncatedString.innerHTML = str
+    }
+
+  </script>
+</body>
+</html>
